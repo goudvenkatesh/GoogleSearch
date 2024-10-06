@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import GoogleSuggestion from './components/GoogleSuggestion'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './App.css'
 
-export default App;
+const suggestionsList = [
+  {id: 1, suggestion: 'Price of Ethereum'},
+  {id: 2, suggestion: 'Oculus Quest 2 specs'},
+  {id: 3, suggestion: 'Tesla Share Price'},
+  {id: 4, suggestion: 'Price of Ethereum today'},
+  {id: 5, suggestion: 'Latest trends in AI'},
+  {id: 6, suggestion: 'Latest trends in ML'},
+  {id: 7, suggestion: 'India is a Most biggest Country'},
+]
+
+const App = () => <GoogleSuggestion suggestionsList={suggestionsList} />
+
+export default App
